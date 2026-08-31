@@ -390,3 +390,53 @@ code{font-family:var(--mono);font-size:.88em;background:rgba(217,180,92,.1);bord
   .profile-head{padding-top:64px}
   .role-chip{display:none}
 }
+
+/* ================= GALERÍAS (v3) ================= */
+.gallery-dots{display:flex;gap:6px;margin:10px 0}
+.gdot{width:26px;height:26px;border-radius:8px;display:grid;place-items:center;font-size:13px;background:rgba(139,92,246,.12);border:1px solid var(--line2);color:var(--text)}
+.gdot.locked{opacity:.55;filter:saturate(.4)}
+.cc-cover-count{position:absolute;right:9px;bottom:9px;font-family:var(--mono);font-size:9px;letter-spacing:.5px;background:rgba(10,7,16,.6);color:#fff;padding:3px 8px;border-radius:7px;z-index:3}
+.gal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px;margin-bottom:34px}
+.gal-card{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;cursor:pointer;transition:.16s}
+.gal-card:hover{border-color:var(--line3);transform:translateY(-2px)}
+.gal-card-locked .gal-cover{filter:saturate(.35)}
+.gal-cover{height:118px;background:linear-gradient(120deg,var(--a,#8b5cf6),var(--b,#d9b45c));position:relative;display:grid;place-items:center}
+.gal-cover .ini{font-size:34px;color:#fff;font-weight:800;text-shadow:0 2px 12px rgba(0,0,0,.35)}
+.gal-cover.locked{position:relative}
+.gal-cover.locked::after{content:"";position:absolute;inset:0;background:rgba(10,7,16,.25)}
+.gal-count{position:absolute;right:9px;top:9px;font-family:var(--mono);font-size:9px;background:rgba(10,7,16,.6);color:#fff;padding:3px 8px;border-radius:7px;z-index:3}
+.gal-body{padding:13px 15px 15px}
+.gal-body b{font-size:13.5px;font-weight:800}
+.gal-meta{font-size:11px;color:var(--muted);margin-top:3px}
+.gal-sections{display:flex;flex-direction:column;gap:18px}
+.gal-sec{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px;scroll-margin-top:110px}
+.gal-sec-active{border-color:var(--gold)}
+.gal-sec-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+.gal-sec-head b{font-size:14.5px}
+.gal-photos{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.gphoto{height:150px;border-radius:13px;background:linear-gradient(135deg,var(--a,#8b5cf6),var(--b,#d9b45c));position:relative;display:grid;place-items:center;cursor:pointer;overflow:hidden;transition:.14s}
+.gphoto:hover{transform:scale(1.02);box-shadow:0 8px 26px rgba(0,0,0,.35)}
+.gphoto .ini{font-size:26px;color:#fff;font-weight:800}
+.gphoto-locked::after{content:"";position:absolute;inset:0;background:rgba(10,7,16,.22)}
+.ph-label{position:absolute;left:9px;bottom:9px;font-size:10.5px;color:#fff;background:rgba(10,7,16,.6);padding:3px 9px;border-radius:7px;z-index:3;max-width:90%}
+.lock-box.small svg{width:18px;height:18px;margin-bottom:3px}
+.gphoto .lock-box{position:relative;z-index:4}
+
+/* ================= WEBCAM (v3) ================= */
+.cam-stage{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+.cam-tile{aspect-ratio:4/3;border-radius:14px;display:grid;place-items:center;position:relative;overflow:hidden}
+.cam-tile .ini{font-size:34px;color:#fff;font-weight:800}
+.cam-tile.me::after{content:"TÚ";position:absolute;top:9px;left:9px;font-family:var(--mono);font-size:8.5px;letter-spacing:1px;background:rgba(10,7,16,.6);color:#fff;padding:3px 8px;border-radius:6px}
+.cam-tile.them::after{content:"CHICA";position:absolute;top:9px;left:9px;font-family:var(--mono);font-size:8.5px;letter-spacing:1px;background:rgba(251,113,133,.75);color:#fff;padding:3px 8px;border-radius:6px}
+.cam-controls{display:flex;gap:9px;justify-content:center;margin-top:4px}
+
+/* ================= ADMIN / SEGURIDAD (v3) ================= */
+.kyc-row{display:flex;align-items:center;gap:14px;background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:15px 17px;margin-bottom:11px;flex-wrap:wrap}
+.kyc-row .avatar{margin:0}
+.au-who{font-family:var(--mono);font-size:10px;color:var(--violet2);letter-spacing:.5px;background:rgba(139,92,246,.1);padding:3px 8px;border-radius:6px;border:1px solid rgba(139,92,246,.25);white-space:nowrap}
+.legal-list{list-style:none;margin:0;padding:0}
+.legal-list li{padding:7px 0 7px 24px;position:relative;font-size:13.5px;color:#d5cae8;line-height:1.6}
+.legal-list li::before{content:"✓";position:absolute;left:0;color:var(--gold)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:20px}
+.split-block h3{font-size:15px;font-weight:800}
+.split-block>p{font-size:12.5px;color:var(--muted);margin-top:3px}
