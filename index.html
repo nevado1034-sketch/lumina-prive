@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lúmina Privé · Creadoras verificadas · Exclusivo +18</title>
+<meta name="description" content="Lúmina Privé: descubre creadoras verificadas y conecta de forma privada, segura y transparente. Plataforma exclusiva para adultos (+18) con verificación de identidad, moderación y pagos transparentes.">
+<meta property="og:title" content="Lúmina Privé · Exclusivo +18">
+<meta property="og:description" content="Creadoras verificadas, conexión privada y segura. Membresías, contenido premium y videollamadas con pagos transparentes.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230e0b14'/%3E%3Ctext x='32' y='44' font-family='Georgia' font-size='34' font-style='italic' text-anchor='middle' fill='%23d9b45c'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ VERIFICACIÓN DE EDAD ============ -->
+<div id="ageGate" class="hidden">
+  <div class="age-card">
+    <div class="age-logo">Lúmina <em>Privé</em></div>
+    <div class="age-badge18">CONTENIDO EXCLUSIVO +18</div>
+    <p class="age-warn">Este sitio contiene material dirigido únicamente a personas adultas.
+    Al ingresar declaras que tienes <b>al menos 18 años</b> (o la mayoría de edad legal en tu jurisdicción),
+    que accedes voluntariamente y que aceptas nuestros <a href="#/legal">Términos</a> y la
+    <a href="#/legal/privacidad">Política de Privacidad</a>.</p>
+    <div class="age-actions">
+      <label class="age-check"><input type="checkbox" id="ageChk">
+        <span>Confirmo que tengo al menos <b>18 años</b> y acepto los <a href="#/legal/terminos">Términos</a>.</span></label>
+      <button id="btnEnter18" class="btn btn-gold btn-lg" disabled>Soy mayor de 18 años · Entrar</button>
+      <a href="https://www.google.com" class="btn btn-ghost">Salir del sitio</a>
+    </div>
+    <small class="age-note">Prototipo demostrativo · Perfiles ficticios · En producción: verificación de edad por documento (KYC externo),
+    cumplimiento de Ley N.º 29733 (DS 016-2024-JUS, Perú) y registros de consentimiento.</small>
+  </div>
+</div>
+
+<!-- ============ BARRA SUPERIOR ============ -->
+<header id="topbar" class="hidden">
+  <a class="brand" href="#/">Lúmina <em>Privé</em></a>
+  <nav class="main-nav" id="mainNav">
+    <a href="#/" data-nav="">Inicio</a>
+    <a href="#/explorar" data-nav="explorar">Explorar</a>
+    <a href="#/" data-scroll="como-funciona">Cómo funciona</a>
+    <a href="#/seguridad" data-nav="seguridad">Seguridad</a>
+    <a href="#/legal" data-nav="legal">Legal</a>
+  </nav>
+  <div class="tb-actions">
+    <span id="roleChip" class="role-chip hidden"></span>
+    <button id="bellBtn" class="bell-btn hidden" title="Notificaciones">🔔<span id="bellCount" class="bell-count hidden"></span></button>
+    <button id="walletChip" class="wallet-chip hidden" title="Saldo e historial">$0.00</button>
+    <button id="btnAuth" class="btn btn-gold btn-sm">Iniciar sesión</button>
+  </div>
+</header>
+
+<!-- ============ VISTAS ============ -->
+<main id="app" class="hidden" aria-live="polite"></main>
+
+<!-- ============ PIE DE PÁGINA ============ -->
+<footer id="footer" class="hidden">
+  <div class="foot-grid container">
+    <div>
+      <div class="brand foot-brand">Lúmina <em>Privé</em></div>
+      <p class="foot-desc">Creadoras verificadas, conexión privada, segura y transparente.
+      Prototipo funcional con datos ficticios para validar el producto.</p>
+      <span class="chip18">18+</span>
+    </div>
+    <div>
+      <h5>Plataforma</h5>
+      <a href="#/explorar">Explorar creadoras</a>
+      <a href="#/suscripciones">Mis suscripciones</a>
+      <a href="#/mensajes">Mensajes</a>
+      <a href="#/creadora/panel">Panel de creadora</a>
+    </div>
+    <div>
+      <h5>Mi cuenta</h5>
+      <a href="#/" data-action="auth-open">Iniciar sesión</a>
+      <a href="#/suscripciones">Mis suscripciones</a>
+      <a href="#/creadora/panel">Panel de creadora</a>
+      <a href="#/admin">Administración</a>
+    </div>
+    <div>
+      <h5>Legal y seguridad</h5>
+      <a href="#/legal/terminos">Términos del servicio</a>
+      <a href="#/legal/privacidad">Privacidad · Ley 29733</a>
+      <a href="#/legal/consentimiento">Política de consentimiento</a>
+      <a href="#/legal/reglas">Reglas de contenido</a>
+      <a href="#/seguridad">Centro de seguridad</a>
+    </div>
+  </div>
+  <div class="foot-bottom container">
+    <span>© 2026 Lúmina Privé · forme69.com · Todos los perfiles son ficticios (demo).</span>
+    <span>Prohibido el acceso a menores de edad. Verificación de edad obligatoria.</span>
+  </div>
+</footer>
+
+<div id="modalRoot"></div>
+<div id="toast"></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
